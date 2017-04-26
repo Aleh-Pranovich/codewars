@@ -1,9 +1,10 @@
-package tes;
+package com.pronovich.codewars;
 
 import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class HumanReadableTimeTest {
+
     @Test
     public void Tests() {
         assertEquals("makeReadable(0)", "00:00:00", HumanReadableTime.makeReadable(0));
