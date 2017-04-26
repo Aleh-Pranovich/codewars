@@ -1,14 +1,11 @@
-package tes;
+package com.pronovich.codewars;
 
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
-import org.junit.Test;
 import static org.junit.Assert.assertEquals;
-import org.junit.runners.JUnit4;
 
 public class LengthOfMissingArrayTest {
+
     @Test
     public void BasicTests() {
         assertEquals(3, LengthOfMissingArray.getLengthOfMissingArray(new Object[][] { new Object[] { 1, 2 },
