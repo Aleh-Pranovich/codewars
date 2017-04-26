@@ -1,6 +1,5 @@
-package tes;
+package com.pronovich.codewars;
 
-import org.junit.Assert;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -17,5 +16,4 @@ public class PrimeDecompTest {
     public void testPrimeDecompSecond() {
         assertEquals("(7537)(123863)", PrimeDecomp.factors(933_555_431) );
     }
-
 }
