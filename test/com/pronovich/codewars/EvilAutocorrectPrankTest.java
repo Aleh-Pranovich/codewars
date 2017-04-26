@@ -1,4 +1,4 @@
-package tes;
+package com.pronovich.codewars;
 
 import org.junit.Test;
 
