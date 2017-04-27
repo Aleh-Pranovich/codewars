@@ -37,7 +37,28 @@ public class NextSmallerNumberWithSameDigitsTest {
     }
 
     @Test
-    public void basicTests123456789() {
-        assertEquals(123456789, NextSmallerNumberWithSameDigits.nextSmaller(123456798));
+    public void basicTests1234567890120() {
+        assertEquals(1234567890102L, NextSmallerNumberWithSameDigits.nextSmaller(1234567890120L));
     }
+
+    @Test
+    public void basicTestsTooLong() {
+        assertEquals(989_997_999_999_999L, NextSmallerNumberWithSameDigits.nextSmaller(989_999_799_999_999L));
+    }
+
+    @Test
+    public void basicTests153() {
+        assertEquals(153, NextSmallerNumberWithSameDigits.nextSmaller(315));
+    }
+
+    @Test
+    public void basicTests139085() {
+        assertEquals(139085, NextSmallerNumberWithSameDigits.nextSmaller(139508));
+    }
+
+    @Test
+    public void basicTests5812349() {
+        assertEquals(5498321, NextSmallerNumberWithSameDigits.nextSmaller(5812349));
+    }
+
 }
