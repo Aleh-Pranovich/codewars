@@ -1,4 +1,4 @@
-package com.pronovich.codewars;
+package com.pranovich.codewars.java;
 
     /*The number 89 is the first integer with more than one digit that fulfills the property partially introduced in
      the title of this kata. What's the use of saying "Eureka"? Because this sum gives the same number.
@@ -31,7 +31,7 @@ class SumDigPower {
     public static List<Long> sumDigPow(long a, long b) {
         List<Long> result = new ArrayList<>();
         for (long number = a; number <= b; number++) {
-            if (isEurekaNumber(number)){
+            if (isEurekaNumber(number)) {
                 result.add(number);
             }
         }
@@ -50,7 +50,7 @@ class SumDigPower {
 
     private static LinkedList<Long> getStackDigits(long number) {
         LinkedList<Long> stackDigitsOfNumber = new LinkedList<>();
-        while (number > 0){
+        while (number > 0) {
             stackDigitsOfNumber.push(number % 10);
             number /= 10;
         }
@@ -60,7 +60,7 @@ class SumDigPower {
     private static long sumDigitsPower(LinkedList<Long> stackDigitsOfNumber) {
         long sum = 0;
         int power = 1;
-        while ( !stackDigitsOfNumber.isEmpty() ){
+        while (!stackDigitsOfNumber.isEmpty()) {
             long digit = stackDigitsOfNumber.pop();
             sum += Math.pow(digit, power++);
         }

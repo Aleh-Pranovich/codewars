@@ -1,8 +1,7 @@
-package com.pronovich.codewars;
+package com.pranovich.codewars.java;
 
+import org.junit.Assert;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 
 public class AbbreviatorTest {
@@ -11,7 +10,7 @@ public class AbbreviatorTest {
 
     @Test
     public void testInternationalization() {
-        assertEquals("i18n", abbr.abbreviate("internationalization"));
+        Assert.assertEquals("i18n", abbr.abbreviate("internationalization"));
     }
 
 }

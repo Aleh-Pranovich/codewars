@@ -1,4 +1,4 @@
-package com.pronovich.codewars;
+package com.pranovich.codewars.java;
 
     /*Write a function that takes a positive integer and returns the next smaller positive integer containing
     the same digits.
@@ -37,7 +37,7 @@ public class NextSmallerNumberWithSameDigits {
     private static Integer[] splitNumberIntoArrayOfDigits(long n) {
         int size = String.valueOf(n).length();
         Integer[] digits = new Integer[size];
-        for (int i= size-1; i >= 0; i--) {
+        for (int i = size - 1; i >= 0; i--) {
             digits[i] = Math.toIntExact(n % 10);
             n /= 10L;
         }
@@ -47,9 +47,9 @@ public class NextSmallerNumberWithSameDigits {
     private static Integer[] arrangeDigitsInCorrectOrder(Integer[] digits) {
         //1. find the first digit from the end which > than previous
         for (int j = digits.length - 2; j >= 0; j--) {
-            if (digits[j] > digits[j+1]) {
+            if (digits[j] > digits[j + 1]) {
                 //2. find the next lower digit from the right sequence from the end
-                for (int x = digits.length-1; x > j; x-- ) {
+                for (int x = digits.length - 1; x > j; x--) {
                     if (digits[j] > digits[x]) {
                         //3. swap them
                         int temp = digits[j];
@@ -67,7 +67,7 @@ public class NextSmallerNumberWithSameDigits {
 
     private static long convertArrayOfDigitsIntoLong(Integer[] digits) {
         StringBuilder builder = new StringBuilder(digits.length);
-        for (int digit: digits) {
+        for (int digit : digits) {
             builder.append(digit);
         }
         return Long.parseLong(builder.toString());
@@ -77,9 +77,6 @@ public class NextSmallerNumberWithSameDigits {
         if (n == result) {
             return false;
         }
-        if (String.valueOf(n).length() != String.valueOf(result).length()) {
-            return false;
-        }
-        return true;
+        return String.valueOf(n).length() == String.valueOf(result).length();
     }
 }

@@ -1,32 +1,31 @@
-package com.pronovich.codewars;
+package com.pranovich.codewars.java;
 
+import org.junit.Assert;
 import org.junit.Test;
-
-import static org.junit.Assert.assertEquals;
 
 public class LengthOfMissingArrayTest {
 
     @Test
     public void BasicTests() {
-        assertEquals(3, LengthOfMissingArray.getLengthOfMissingArray(new Object[][] { new Object[] { 1, 2 },
+        Assert.assertEquals(3, LengthOfMissingArray.getLengthOfMissingArray(new Object[][] { new Object[] { 1, 2 },
                 new Object[] { 4, 5, 1, 1 }, new Object[] { 1 }, new Object[] { 5, 6, 7, 8, 9 }} ));
 
-        assertEquals(2, LengthOfMissingArray.getLengthOfMissingArray(new Object[][] { new Object[] { 5, 2, 9 },
+        Assert.assertEquals(2, LengthOfMissingArray.getLengthOfMissingArray(new Object[][] { new Object[] { 5, 2, 9 },
                 new Object[] { 4, 5, 1, 1 }, new Object[] { 1 }, new Object[] { 5, 6, 7, 8, 9 }} ));
 
-        assertEquals(2, LengthOfMissingArray.getLengthOfMissingArray(new Object[][] { new Object[] { null },
+        Assert.assertEquals(2, LengthOfMissingArray.getLengthOfMissingArray(new Object[][] { new Object[] { null },
                 new Object[] { null, null, null } } ));
 
-        assertEquals(5, LengthOfMissingArray.getLengthOfMissingArray(new Object[][] {
+        Assert.assertEquals(5, LengthOfMissingArray.getLengthOfMissingArray(new Object[][] {
                 new Object[] { 'a', 'a', 'a' }, new Object[] { 'a', 'a' }, new Object[] { 'a', 'a', 'a', 'a' },
                 new Object[] { 'a' }, new Object[] { 'a', 'a', 'a', 'a', 'a', 'a' }} ));
 
-        assertEquals(0, LengthOfMissingArray.getLengthOfMissingArray(new Object[][] { }));
+        Assert.assertEquals(0, LengthOfMissingArray.getLengthOfMissingArray(new Object[][] { }));
     }
 
     @Test
     public void BasicTestsWr() {
-        assertEquals(0, LengthOfMissingArray.getLengthOfMissingArray( new Object[][]{
+        Assert.assertEquals(0, LengthOfMissingArray.getLengthOfMissingArray( new Object[][]{
                 new Object[]{2, 0, 3, 3, 4},
                 new Object[]{3, 2, 0},
                 new Object[]{},
@@ -42,6 +41,6 @@ public class LengthOfMissingArrayTest {
 
     @Test
     public void BasicTestsNull() {
-        assertEquals(0, LengthOfMissingArray.getLengthOfMissingArray( new Object[][]{null} ) );
+        Assert.assertEquals(0, LengthOfMissingArray.getLengthOfMissingArray( new Object[][]{null} ) );
     }
 }

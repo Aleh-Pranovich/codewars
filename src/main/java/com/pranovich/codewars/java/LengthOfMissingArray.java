@@ -1,4 +1,4 @@
-package com.pronovich.codewars;
+package com.pranovich.codewars.java;
 
     /* You get an array of arrays.
     If you sort the arrays by their length, you will see, that their length-values are consecutive.
@@ -29,7 +29,7 @@ public class LengthOfMissingArray {
     }
 
     private static boolean isNotValid(Object[][] arrayOfArrays) {
-        if ( arrayOfArrays == null || arrayOfArrays.length == 0 ) {
+        if (arrayOfArrays == null || arrayOfArrays.length == 0) {
             return true;
         }
         for (Object[] arr : arrayOfArrays) {
@@ -51,9 +51,9 @@ public class LengthOfMissingArray {
 
     private static int getMissedLength(List<Integer> lengthArr) {
         for (int i = 0; i < lengthArr.size() - 1; i++) {
-            int currentLength =  lengthArr.get(i);
+            int currentLength = lengthArr.get(i);
             int nextLength = lengthArr.get(i + 1);
-            if ( currentLength + 1 !=  nextLength ) {
+            if (currentLength + 1 != nextLength) {
                 return currentLength + 1;
             }
         }

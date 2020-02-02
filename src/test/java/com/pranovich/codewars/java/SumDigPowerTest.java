@@ -1,13 +1,14 @@
-package com.pronovich.codewars;
+package com.pranovich.codewars.java;
 
-import static org.junit.Assert.*;
-import java.util.Arrays;
+import org.junit.Assert;
 import org.junit.Test;
+
+import java.util.Arrays;
 
 public class SumDigPowerTest {
 
     private static void testing(long a, long b, long[] res) {
-        assertEquals(Arrays.toString(res), Arrays.toString(SumDigPower.sumDigPow(a, b).toArray()));
+        Assert.assertEquals(Arrays.toString(res), Arrays.toString(SumDigPower.sumDigPow(a, b).toArray()));
     }
 
     @Test

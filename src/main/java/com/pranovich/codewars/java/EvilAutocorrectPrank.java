@@ -1,4 +1,4 @@
-package com.pronovich.codewars;
+package com.pranovich.codewars.java;
 
     /*Your friend won't stop texting his girlfriend. It's all he does. All day. Seriously. The texts are so mushy too!
      The whole situation just makes you feel ill. Being the wonderful friend that you are, you hatch an evil plot.

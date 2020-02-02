@@ -1,4 +1,4 @@
-package com.pronovich.codewars;
+package com.pranovich.codewars.java;
 
     /*
     At a job interview, you are challenged to write an algorithm to check if a given string, s, can be formed from
@@ -25,16 +25,16 @@ public class StringMerger {
         int secondIndex = 0;
 
         for (int resIndex = 0; resIndex < resChars.length; resIndex++) {
-            if ( matchWithCharInResArray(firstChars, firstIndex, resChars, resIndex) && !matchWithCharInResArray(secondChars, secondIndex, resChars, resIndex) ) {
+            if (matchWithCharInResArray(firstChars, firstIndex, resChars, resIndex) && !matchWithCharInResArray(secondChars, secondIndex, resChars, resIndex)) {
                 firstIndex++;
-            } else if ( !matchWithCharInResArray(firstChars, firstIndex, resChars, resIndex) && matchWithCharInResArray(secondChars, secondIndex, resChars, resIndex) ) {
+            } else if (!matchWithCharInResArray(firstChars, firstIndex, resChars, resIndex) && matchWithCharInResArray(secondChars, secondIndex, resChars, resIndex)) {
                 secondIndex++;
-            } else if ( matchWithCharInResArray(firstChars, firstIndex, resChars, resIndex) && matchWithCharInResArray(secondChars, secondIndex, resChars, resIndex) ) {
-                char[] resCharsRemainder = Arrays.copyOfRange(resChars, resIndex, resChars.length );
-                char[] firstCharsRemainder = Arrays.copyOfRange(firstChars, firstIndex, firstChars.length );
-                char[] secondCharsRemainder = Arrays.copyOfRange(secondChars, secondIndex, secondChars.length );
+            } else if (matchWithCharInResArray(firstChars, firstIndex, resChars, resIndex) && matchWithCharInResArray(secondChars, secondIndex, resChars, resIndex)) {
+                char[] resCharsRemainder = Arrays.copyOfRange(resChars, resIndex, resChars.length);
+                char[] firstCharsRemainder = Arrays.copyOfRange(firstChars, firstIndex, firstChars.length);
+                char[] secondCharsRemainder = Arrays.copyOfRange(secondChars, secondIndex, secondChars.length);
 
-                if ( firstDifferenceInFirstArray(resCharsRemainder, firstCharsRemainder, secondCharsRemainder ) ) {
+                if (firstDifferenceInFirstArray(resCharsRemainder, firstCharsRemainder, secondCharsRemainder)) {
                     secondIndex++;
                 } else {
                     firstIndex++;
@@ -43,10 +43,7 @@ public class StringMerger {
                 return false;
             }
         }
-        if (remainedUnusedChars(firstChars, secondChars, firstIndex, secondIndex)) {
-            return false;
-        }
-        return true;
+        return !remainedUnusedChars(firstChars, secondChars, firstIndex, secondIndex);
     }
 
     private static boolean remainedUnusedChars(char[] firstChars, char[] secondChars, int firstIndex, int secondIndex) {
@@ -54,7 +51,7 @@ public class StringMerger {
     }
 
     private static boolean matchWithCharInResArray(char[] arrChars, int arrIndex, char[] resChars, int resIndex) {
-        if ( arrIndex >= arrChars.length ) {
+        if (arrIndex >= arrChars.length) {
             return false;
         }
         return resChars[resIndex] == arrChars[arrIndex];
@@ -71,7 +68,7 @@ public class StringMerger {
 
     private static int lengthOfShortestArray(char[] firstChars, char[] secondChars) {
         if (firstChars.length < secondChars.length) {
-            return  firstChars.length;
+            return firstChars.length;
         }
         return secondChars.length;
     }

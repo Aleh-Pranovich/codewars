@@ -1,4 +1,4 @@
-package com.pronovich.codewars;
+package com.pranovich.codewars.java;
 
     /*The word i18n is a common abbreviation of internationalization the developer community use instead of typing
     the whole word and trying to spell it correctly. Similarly, a11y is an abbreviation of accessibility.
